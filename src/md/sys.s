@@ -59,10 +59,10 @@ Date:
 		dc.l	SramBase+0xFFFE             /* SRAM End Address */
 	.globl Version
 Version:
-		.ascii	"Ver 0.8.1\0  "              /* Modem? */
+		.ascii	"VER 0.8.1\0  "              /* Modem? */
 	.globl Homepage
 Homepage:
-		.ascii	"https://github.com/andwn/cave-story-md\0\0" /* Free space for note */
+		.ascii	"HTTPS://GITHUB.COM/ANDWN/CAVE-STORY-MD\0\0" /* Free space for note */
 		.ascii	"JUE             "          /* Region */
 
 /* Blank data used for various things */
