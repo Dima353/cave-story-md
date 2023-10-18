@@ -42,9 +42,9 @@ void draw_track_info(uint8_t track) {
 
 void draw_status(uint8_t status) {
 	switch(status) {
-		case STOPPED: vdp_puts(VDP_PLANE_A, "Stopped", 2, 4); break;
-		case PLAYING: vdp_puts(VDP_PLANE_A, "Playing", 2, 4); break;
-		case PAUSED:  vdp_puts(VDP_PLANE_A, "Paused ", 2, 4); break;
+		case STOPPED: vdp_puts(VDP_PLANE_A, "STOPPED", 2, 4); break;
+		case PLAYING: vdp_puts(VDP_PLANE_A, "PLAYING", 2, 4); break;
+		case PAUSED:  vdp_puts(VDP_PLANE_A, "PAUSED", 2, 4); break;
 	}
 }
 
@@ -69,15 +69,15 @@ void soundtest_main() {
 	}
 
 	draw_status(status);
-	vdp_puts(VDP_PLANE_A, "Sound Test", 15, 2);
-	vdp_puts(VDP_PLANE_A, "Track: ", 2, 8);
+	vdp_puts(VDP_PLANE_A, "SOUND TEST", 15, 2);
+	vdp_puts(VDP_PLANE_A, "TRACK: ", 2, 8);
 	{
         vdp_puts(VDP_PLANE_A, btnName[cfg_btn_jump], 2, 15);
-        vdp_puts(VDP_PLANE_A, "-Play",  4, 15);
+        vdp_puts(VDP_PLANE_A, "-PLAY",  4, 15);
         vdp_puts(VDP_PLANE_A, btnName[cfg_btn_shoot], 10,15);
-        vdp_puts(VDP_PLANE_A, "-Stop",  12,15);
+        vdp_puts(VDP_PLANE_A, "-STOP",  12,15);
         vdp_puts(VDP_PLANE_A, btnName[cfg_btn_pause], 18,15);
-        vdp_puts(VDP_PLANE_A, "-Quit",  20,15);
+        vdp_puts(VDP_PLANE_A, "-QUIT",  20,15);
 	}
 	
 	DRAW_BYTE(track, 10, 8);

@@ -36,11 +36,11 @@ enum { CM_LOAD, CM_COPY, CM_PASTE, CM_DELETE, CM_CONFIRM };
 
 static void draw_cursor_mode(uint8_t mode) {
 	switch(mode) {
-		case CM_LOAD:    vdp_puts(VDP_PLANE_A, " Load Save Data ", 12, 2); break;
-		case CM_COPY:    vdp_puts(VDP_PLANE_A, " Copy Save Data ", 12, 2); break;
-		case CM_PASTE:   vdp_puts(VDP_PLANE_A, "Paste Save Data ", 12, 2); break;
-		case CM_DELETE:  vdp_puts(VDP_PLANE_A, "Delete Save Data", 12, 2); break;
-		case CM_CONFIRM: vdp_puts(VDP_PLANE_A, " Are you sure?  ", 12, 2); break;
+		case CM_LOAD:    vdp_puts(VDP_PLANE_A, "zagruzitx sohranenie ", 12, 2); break;
+		case CM_COPY:    vdp_puts(VDP_PLANE_A, "kopirowatx sohranenie", 12, 2); break;
+		case CM_PASTE:   vdp_puts(VDP_PLANE_A, " wstawitx sohranenie ", 12, 2); break;
+		case CM_DELETE:  vdp_puts(VDP_PLANE_A, " udalitx sohranenie  ", 12, 2); break;
+		case CM_CONFIRM: vdp_puts(VDP_PLANE_A, "     ty uweren?      ", 12, 2); break;
 	}
 }
 
@@ -148,7 +148,7 @@ static uint8_t refresh_file(uint8_t index) {
             cjk_draw(VDP_PLANE_A, 0x100 + 516, 9, y, 0, 1); // 운
             cjk_newline();
         } else {
-            vdp_puts(VDP_PLANE_A, "New Game", 6, y);
+            vdp_puts(VDP_PLANE_A, "nowaq igra", 6, y);
         }
 		vdp_text_clear(VDP_PLANE_A, 26, y, 10);
 		vdp_text_clear(VDP_PLANE_A, 6, y + 2, 8);
@@ -198,8 +198,8 @@ uint8_t saveselect_main() {
 	for(uint16_t i = 0; i < SRAM_FILE_MAX; i++) {
         file_used[i] = refresh_file(i);
     }
-	vdp_puts(VDP_PLANE_A, "Copy", 6, 25);
-	vdp_puts(VDP_PLANE_A, "Delete", 16, 25);
+	vdp_puts(VDP_PLANE_A, "kopiq", 6, 25);
+	vdp_puts(VDP_PLANE_A, "udalitx", 16, 25);
 	
 	vdp_set_display(TRUE);
 

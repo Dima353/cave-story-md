@@ -61,34 +61,34 @@ typedef struct {
 
 const MenuItem menu[NUM_PAGES + 1][MAX_OPTIONS] = {
 	{ // Controller
-		{ 4,  /*1,  AKI,    */MI_INPUT, "Jump / Confirm", &cfg_btn_jump },
-		{ 6,  /*2,  AKI+60, */MI_INPUT, "Shoot / Cancel", &cfg_btn_shoot },
-		{ 8,  /*3,  AKI+120,*/MI_INPUT, "Switch Weapon (3btn)", &cfg_btn_ffwd },
-        { 9,  /*3,  0,      */MI_LABEL, "Fast Fwd Text (6btn)", NULL },
-		{ 11, /*4,  AKI+180,*/MI_INPUT, "Switch Right (6btn)", &cfg_btn_rswap },
-		{ 13, /*5,  AKI+240,*/MI_INPUT, "Switch Left (6btn)", &cfg_btn_lswap },
-		{ 15, /*6,  AKI+300,*/MI_INPUT, "Open Map (6btn)", &cfg_btn_map },
-		{ 17, /*7,  AKI+360,*/MI_INPUT, "Pause Menu", &cfg_btn_pause },
+		{ 4,  /*1,  AKI,    */MI_INPUT, "pryvok / wybor", &cfg_btn_jump },
+		{ 6,  /*2,  AKI+60, */MI_INPUT, "ogonx / otmena", &cfg_btn_shoot },
+		{ 8,  /*3,  AKI+120,*/MI_INPUT, "perekl`{. oruviq (3kn.)", &cfg_btn_ffwd },
+        { 9,  /*3,  0,      */MI_LABEL, "uskorenie teksta (6kn.)", NULL },
+		{ 11, /*4,  AKI+180,*/MI_INPUT, "sled. oruvie (6kn.)", &cfg_btn_rswap },
+		{ 13, /*5,  AKI+240,*/MI_INPUT, "pred. oruvie (6kn.)", &cfg_btn_lswap },
+		{ 15, /*6,  AKI+300,*/MI_INPUT, "karta (6kn.)", &cfg_btn_map },
+		{ 17, /*7,  AKI+360,*/MI_INPUT, "pauza", &cfg_btn_pause },
 
-		{ 20, /*8,  AKI+420,*/MI_MODE,  "Force Button Mode", &cfg_force_btn },
+		{ 20, /*8,  AKI+420,*/MI_MODE,  "revim gejmpada", &cfg_force_btn },
 
-		{ 23, /*19, BKI,    */MI_ACTION, "Apply", (uint8_t*)1 },
-		{ 25, /*20, BKI+40, */MI_ACTION, "Reset to Default", (uint8_t*)0 },
+		{ 23, /*19, BKI,    */MI_ACTION, "primenitx", (uint8_t*)1 },
+		{ 25, /*20, BKI+40, */MI_ACTION, "po umol{ani`", (uint8_t*)0 },
 	},{ // Gameplay
-		{ 4,  /*9,  AKI,    */MI_TOGGLE, "CS+ Speed (NTSC Only)", &cfg_60fps },
-		{ 7,  /*10, AKI+60, */MI_TOGGLE, "Enable Fast Forward", &cfg_ffwd },
-		{ 9,  /*11, AKI+120,*/MI_TOGGLE, "Use Up to Interact", &cfg_updoor },
-		{ 11, /*12, AKI+180,*/MI_TOGGLE, "Screen Shake in Hell", &cfg_hellquake },
-		{ 13, /*13, AKI+240,*/MI_TOGGLE, "Vulnerable After Pause", &cfg_iframebug },
-		{ 15, /*14, AKI+300,*/MI_TOGGLE, "Message Blip Sound", &cfg_msg_blip },
-		{ 17, /*15, AKI+360,*/MI_TOGGLE, "Mute BGM", &cfg_music_mute },
-		{ 19, /*16, AKI+420,*/MI_TOGGLE, "Mute SFX", &cfg_sfx_mute },
+		{ 4,  /*9,  AKI,    */MI_TOGGLE, "skorostx CS+ (NTSC)", &cfg_60fps },
+		{ 7,  /*10, AKI+60, */MI_TOGGLE, "wkl. uskorennyj gejmplej", &cfg_ffwd },
+		{ 9,  /*11, AKI+120,*/MI_TOGGLE, "isp. kn. UP dlq dejstwij", &cfg_updoor },
+		{ 11, /*12, AKI+180,*/MI_TOGGLE, "trqska izobraveniq w adu", &cfg_hellquake },
+		{ 13, /*13, AKI+240,*/MI_TOGGLE, "uqzwimyj posle pauzy", &cfg_iframebug },
+		{ 15, /*14, AKI+300,*/MI_TOGGLE, "zwuk dialogow", &cfg_msg_blip },
+		{ 17, /*15, AKI+360,*/MI_TOGGLE, "wykl. muzyku", &cfg_music_mute },
+		{ 19, /*16, AKI+420,*/MI_TOGGLE, "wykl. zwuki", &cfg_sfx_mute },
 
-		{ 23, /*19, BKI,    */MI_ACTION, "Apply", (uint8_t*)1 },
-		{ 25, /*20, BKI+40, */MI_ACTION, "Reset to Default", (uint8_t*)0 },
+		{ 23, /*19, BKI,    */MI_ACTION, "primenitx", (uint8_t*)1 },
+		{ 25, /*20, BKI+40, */MI_ACTION, "po umol{ani`", (uint8_t*)0 },
 	},{ // Save data
-		{ 4,  /*17, AKI,    */MI_ACTION, "Erase Counter", (uint8_t*)3 },
-		{ 6,  /*18, AKI+60, */MI_ACTION, "Erase All Save Data (!)", (uint8_t*)4 },
+		{ 4,  /*17, AKI,    */MI_ACTION, "udalitx s{et", (uint8_t*)3 },
+		{ 6,  /*18, AKI+60, */MI_ACTION, "udalitx wse sohraneniq", (uint8_t*)4 },
 	},
 };
 
@@ -99,9 +99,9 @@ const uint16_t btn[12] = {
 };
 
 const char btnName[12][4] = {
-        "Up", "Dn", "Lt", "Rt",
-        "B", "C", "A", "St",
-        "Z", "Y", "X", "Md"
+        "UP", "DN", "LT", "RT",
+        "B", "C", "A", "ST",
+        "Z", "Y", "X", "MD"
 };
 
 const char boolstr[2][4] = { "OFF", "ON " };
@@ -197,7 +197,7 @@ uint8_t set_page(uint8_t page) {
 			//if(cfg_language == LANG_JA) {
 			//	DrawJStr(8, 1, WKI, 21);
 			//} else {
-				vdp_puts(VDP_PLANE_A, "(1) Controller Config", 8, 1);
+				vdp_puts(VDP_PLANE_A, "(1) nastrojki dvojstika", 8, 1);
 
 			//}
 			break;
@@ -205,14 +205,14 @@ uint8_t set_page(uint8_t page) {
 			//if(cfg_language == LANG_JA) {
 			//	DrawJStr(8, 1, WKI, 23);
 			//} else {
-				vdp_puts(VDP_PLANE_A, "(2) Gameplay Config", 8, 1);
+				vdp_puts(VDP_PLANE_A, "(2) nastrojki gejmpleq", 8, 1);
 			//}
 			break;
 		case PAGE_SAVEDATA:
 			//if(cfg_language == LANG_JA) {
 			//	DrawJStr(8, 1, WKI, 24);
 			//} else {
-				vdp_puts(VDP_PLANE_A, "(3) Save Data", 8, 1);
+				vdp_puts(VDP_PLANE_A, "(3) sohraneniq", 8, 1);
 			//}
 			break;
 	}
@@ -237,7 +237,7 @@ void press_menuitem(const MenuItem *item, uint8_t page, Sprite *sprCursor) {
 		case MI_INPUT: {
 			sound_play(SND_MENU_SELECT, 5);
 			uint8_t released = FALSE;
-			vdp_puts(VDP_PLANE_A, "Press..", 30, item->y);
+			vdp_puts(VDP_PLANE_A, "navmi...", 30, item->y);
 			while(TRUE) {
 				if(!(joystate & btn[cfg_btn_jump])) released = TRUE;
 				if(joy_pressed(JOY_ANYBTN)) {
@@ -372,8 +372,8 @@ void act_format(uint8_t page) {
 	(void)(page);
 	uint8_t starts = 0;
 	uint16_t timer = 0;
-	vdp_puts(VDP_PLANE_A, "Are you sure?", 13, 12);
-	vdp_puts(VDP_PLANE_A, "Press Start three times", 8, 14);
+	vdp_puts(VDP_PLANE_A, "ty uweren?", 13, 12);
+	vdp_puts(VDP_PLANE_A, "navmi START 3 raza", 8, 14);
 	song_stop();
 	while(!joy_pressed(btn[cfg_btn_shoot])) {
 		if(joy_pressed(JOY_START) && ++starts >= 3) {

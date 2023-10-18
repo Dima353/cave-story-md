@@ -112,9 +112,9 @@ uint8_t titlescreen_main() {
 #endif
 
 	// Menu and version text
-	vdp_puts(VDP_PLANE_A, "Start Game", 15, MENUY);
-	vdp_puts(VDP_PLANE_A, "Sound Test", 15, MENUY+4);
-	vdp_puts(VDP_PLANE_A, "Config", 15, MENUY+6);
+	vdp_puts(VDP_PLANE_A, "na{atx igru", 15, MENUY);
+	vdp_puts(VDP_PLANE_A, "test zwuka", 15, MENUY+4);
+	vdp_puts(VDP_PLANE_A, "nastrojki", 15, MENUY+6);
 
 	// Set palettes last
 	vdp_colors(0, PAL_Main, 16);
@@ -180,32 +180,32 @@ uint8_t titlescreen_main() {
 		vdp_color(12, 0x666);
 		vdp_color(16 + 15, 0xAAA);
 		static const char *levelStr[] = {
-			" First Cave",
-			" Mimiga Village",
-			" Egg Corridor",
-			" Grasstown",
-			" Malco",
-			" Balfrog",
-			" Sand Zone",
-			" Omega",
-			" Storehouse",
-			" Labyrinth",
-			" Monster X",
-			" Labyrinth M",
-			" Core",
-			" Waterway",
-			" Egg Corridor 2",
-			" Outer Wall",
-			" Plantation",
-			" Last Cave",
-			" Last Cave 2",
-			" Balcony",
-			" Sacred Ground",
-			" Seal Chamber",
+			" FIRST CAVE",
+			" MIMIGA VILLAGE",
+			" EGG CORRIDOR",
+			" GRASSTOWN",
+			" MALCO",
+			" BALFROG",
+			" SAND ZONE",
+			" OMEGA",
+			" STOREHOUSE",
+			" LABYRINTH",
+			" MONSTER X",
+			" LABYRINTH M",
+			" CORE",
+			" WATERWAY",
+			" EGG CORRIDOR 2",
+			" OUTER WALL",
+			" PLANTATION",
+			" LAST CAVE",
+			" LAST CAVE 2",
+			" BALCONY",
+			" SACRED GROUND",
+			" SEAL CHAMBER",
 		};
 		uint16_t tx = 11, ty = 1;
 		if(pal_mode) ty++;
-		vdp_puts(VDP_PLANE_A, "= Welcome to Warp Zone =", 7, ty);
+		vdp_puts(VDP_PLANE_A, "= WELCOME TO WARP ZONE =", 7, ty);
 		ty += 2;
 		for(uint8_t i = 0; i < SAVES; i++) {
 			if(cursor == i) vdp_font_pal(PAL0);
