@@ -168,7 +168,7 @@ const struct {
 	{  4*8,  5*8 + 10*8 },
 	{  4*8,  5*8 + 15*8 },
 	{  4*8,  5*8 + 20*8 },
-	{ 14*8,  5*8 + 20*8 },
+	{ 16*8,  5*8 + 20*8 },
 };
 
 extern uint8_t tpal;
@@ -198,8 +198,8 @@ uint8_t saveselect_main() {
 	for(uint16_t i = 0; i < SRAM_FILE_MAX; i++) {
         file_used[i] = refresh_file(i);
     }
-	vdp_puts(VDP_PLANE_A, "kopiq", 6, 25);
-	vdp_puts(VDP_PLANE_A, "udalitx", 16, 25);
+	vdp_puts(VDP_PLANE_A, "kopirowatx", 6, 25);
+	vdp_puts(VDP_PLANE_A, "udalitx", 18, 25);
 	
 	vdp_set_display(TRUE);
 
