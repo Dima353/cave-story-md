@@ -63,7 +63,7 @@ const MenuItem menu[NUM_PAGES + 1][MAX_OPTIONS] = {
 	{ // Controller
 		{ 4,  /*1,  AKI,    */MI_INPUT, "pryvok / wybor", &cfg_btn_jump },
 		{ 6,  /*2,  AKI+60, */MI_INPUT, "ogonx / otmena", &cfg_btn_shoot },
-		{ 8,  /*3,  AKI+120,*/MI_INPUT, "perekl`{. oruviq (3kn.)", &cfg_btn_ffwd },
+		{ 8,  /*3,  AKI+120,*/MI_INPUT, "smena oruviq (3kn.)", &cfg_btn_ffwd },
         { 9,  /*3,  0,      */MI_LABEL, "uskorenie teksta (6kn.)", NULL },
 		{ 11, /*4,  AKI+180,*/MI_INPUT, "sled. oruvie (6kn.)", &cfg_btn_rswap },
 		{ 13, /*5,  AKI+240,*/MI_INPUT, "pred. oruvie (6kn.)", &cfg_btn_lswap },
@@ -197,7 +197,7 @@ uint8_t set_page(uint8_t page) {
 			//if(cfg_language == LANG_JA) {
 			//	DrawJStr(8, 1, WKI, 21);
 			//} else {
-				vdp_puts(VDP_PLANE_A, "(1) nastrojki dvojstika", 8, 1);
+				vdp_puts(VDP_PLANE_A, "(1) nastrojki uprawleniq", 8, 1);
 
 			//}
 			break;
