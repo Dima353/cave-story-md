@@ -140,8 +140,8 @@ void draw_itemmenu(uint8_t resetCursor) {
     // Load 8x8 numbers
     vdp_tiles_load_uftc(*TS_MSGTEXT,TILE_HUDINDEX,'0'-0x20,10);
     // Lv, slash for weapon display
-    LOAD_LETTER('L', 26);
-    LOAD_LETTER('v', 27);
+    LOAD_LETTER('S', 26);
+    LOAD_LETTER('p', 27);
     LOAD_LETTER('/', 28);
     LOAD_LETTER('-', 29);
     // ARMSITEM or ぶきもちもの
