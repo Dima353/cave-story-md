@@ -1,8 +1,8 @@
 # Cave Story MD
-![Comparison Shot](doc/screen01.png)
-[Video](http://www.youtube.com/watch?v=aZU133ekDVk)
+Эта ветка с переводом пунктов меню на русский язык:
 
-[日本語はこちら](README-ja.md)
+![9VIBC1U5GnA](https://github.com/Dima353/cave-story-md/assets/75039669/845e9d94-5e49-4667-9308-f68e6a43da79)
+
 
 This is a rewrite/port of the popular freeware game Cave Story for Sega Mega Drive/Genesis.
 It should work on any console or emulator. The main story is "finished", only little things and bugfixes remain.
